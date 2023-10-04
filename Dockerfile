@@ -32,6 +32,8 @@ RUN apt-get -y autoremove && apt-get -y autoclean
 # Install Rclone
 RUN curl https://rclone.org/install.sh | bash 
 
+EXPOSE 8080
+
 # Setup Language Environments
 RUN locale-gen en_US.UTF-8
 ENV LANG="en_US.UTF-8" LANGUAGE="en_US:en" LC_ALL="en_US.UTF-8"
